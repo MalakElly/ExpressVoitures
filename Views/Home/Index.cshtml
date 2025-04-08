@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Accueil - Voitures Express";
+}
+<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+<div class="container-fluid p-0">
+    <div class="banner text-white text-center d-flex align-items-center justify-content-center"
+         style="height: 80vh; background: url('/img/banner-voiture.jpg') center/cover;">
+        <div class="overlay bg-dark bg-opacity-50 w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-2 fw-bold">Bienvenue chez Voitures Express</h1>
+            <p class="lead">Découvrez des voitures d'occasion rénovées avec soin et prêtes à partir !</p>
+            <a href="@Url.Action("Index", "Cars")" class="btn btn-primary btn-lg mt-3">Voir les voitures disponibles</a>
+        </div>
+    </div>
+
+
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Qui sommes-nous ?</h2>
+            <p class="text-muted">Voitures Express est une entreprise spécialisée dans la revente de véhicules soigneusement sélectionnés, achetés aux enchères et remis à neuf pour votre plaisir.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-car fa-3x mb-3 text-primary"></i>
+                    <h4>Des voitures de qualité</h4>
+                    <p>Chaque voiture est inspectée et remise à neuf avant sa mise en vente.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-euro-sign fa-3x mb-3 text-primary"></i>
+                    <h4>Des prix transparents</h4>
+                    <p>Prix clairs avec un bénéfice fixe de 500€ — pas de surprises !</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                    <h4>Fiabilité et sécurité</h4>
+                    <p>Notre site suit les bonnes pratiques de sécurité pour protéger vos données.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Ils nous ont fait confiance</h2>
+            <p class="text-muted">Nos clients sont nos meilleurs ambassadeurs.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Service impeccable, j'ai trouvé la voiture parfaite pour ma famille !"</p>
+                        <footer class="blockquote-footer">Sophie M.</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Des prix clairs et une voiture comme neuve, bravo !"</p>
+                        <footer class="blockquote-footer">Karim T.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+</div>
