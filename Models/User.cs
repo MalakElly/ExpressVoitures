@@ -10,7 +10,7 @@ namespace GestionVoituresExpress.Models
         public string? LastName { get; set; }
         public string? Address { get; set; } 
         public bool IsAdmin { get; set; } = false;
-        public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
+        public ICollection<Transaction> Transactions { get; set; }
     }
 }
 

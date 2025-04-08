@@ -21,13 +21,13 @@ namespace GestionVoituresExpress.Models
 
         [Required]
         public string Model { get; set; }
-        [Display(Name ="Finition")]
+        [Display(Name = "Finition")]
         public string Trim { get; set; } // Finition
 
         [Column(TypeName = "decimal(10,2)")]
         public double Price { get; set; }
 
-        public int? Km { get; set; } 
+        public int? Km { get; set; }
 
         [Display(Name = "Date de mise en vente")]
         [DataType(DataType.Date)]
@@ -36,7 +36,7 @@ namespace GestionVoituresExpress.Models
         public string? ImageURL { get; set; }
 
         public ICollection<Repairing> Repairing { get; set; }
-        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
+        public ICollection<Transaction> Transactions { get; set; }
     }
 }
 

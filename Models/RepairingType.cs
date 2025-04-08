@@ -6,10 +6,10 @@ namespace GestionVoituresExpress.Models
     public class RepairingType
     {
         [Key]
-        public int Id { get; set; }
-        public string NomReparation { get; set; }
-        public int PrixReparation { get; set; }
-        public ICollection<Repairing> Repairings { get; set; }
-        
+        public int RepairingTypeId { get; set; }
+        public string RepairingName { get; set; }
+
+        public ICollection<RepairingAndType> RepairingAndTypes { get; set; }
+
     }
 }
