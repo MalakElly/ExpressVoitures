@@ -1,0 +1,161 @@
+﻿@model GestionVoituresExpress.Models.Transaction
+
+@{
+    ViewData["Title"] = "Ajouter une voiture";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #fefaf3;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+        color: #2c1b12;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #2c1b12;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .form-check-label {
+        color: #2c1b12;
+    }
+
+    .btn-gold {
+        background-color: #d7a75c;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-gold:hover {
+            background-color: #bb8f4a;
+        }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #2c1b12;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1>Ajouter une voiture</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6 form-container">
+        <form method="post" asp-controller="Admin" asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Car.CodeVIN">Code VIN</label>
+                <input asp-for="Car.CodeVIN" class="form-control" />
+                <span asp-validation-for="Car.CodeVIN" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BuyingDate">Date d'achat</label>
+                <input asp-for="BuyingDate" class="form-control" type="date" min="2000-01-01" />
+                <span asp-validation-for="BuyingDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BuyingPrice">Prix d'achat</label>
+                <input asp-for="BuyingPrice" class="form-control" />
+                <span asp-validation-for="BuyingPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SellingDate">Date de vente</label>
+                <input asp-for="SellingDate" class="form-control" type="date" min="2000-01-01" />
+                <span asp-validation-for="SellingDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SellingPrice">Prix de vente</label>
+                <input asp-for="SellingPrice" class="form-control" />
+                <span asp-validation-for="SellingPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Year">Année de production</label>
+                <input asp-for="Car.Year" class="form-control" value="1990" />
+                <span asp-validation-for="Car.Year" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Brand">Marque</label>
+                <input asp-for="Car.Brand" class="form-control" />
+                <span asp-validation-for="Car.Brand" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Model">Modèle</label>
+                <input asp-for="Car.Model" class="form-control" />
+                <span asp-validation-for="Car.Model" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Trim">Finition</label>
+                <input asp-for="Car.Trim" class="form-control" />
+                <span asp-validation-for="Car.Trim" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Km">Kilométrage</label>
+                <input asp-for="Car.Km" class="form-control" />
+                <span asp-validation-for="Car.Km" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="ImageUpload">Importer une image</label>
+                <input type="file" name="ImageUpload" class="form-control" accept="image/png, image/jpeg" />
+                <span asp-validation-for="Car.ImageURL" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check mt-3">
+                <input asp-for="IsAvailable" class="form-check-input" type="checkbox" />
+                <label asp-for="IsAvailable" class="form-check-label">La voiture est disponible à la vente</label>
+                <span asp-validation-for="IsAvailable" class="text-danger"></span>
+            </div>
+
+            <br />
+            <button type="submit" class="btn-gold">Ajouter la voiture</button>
+        </form>
+
+        <a asp-action="Index" class="back-link">← Retour à la liste</a>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

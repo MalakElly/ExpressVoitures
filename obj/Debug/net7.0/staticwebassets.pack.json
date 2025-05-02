@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GestionVoituresExpress.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\Log.txt",
+      "PackagePath": "staticwebassets\\Log.txt"
+    },
+    {
       "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\css\\Home.css",
       "PackagePath": "staticwebassets\\css\\Home.css"
     },
@@ -15,6 +19,50 @@
     {
       "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\020a5ed8-9b34-48b5-b243-391e729c8b5d.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\020a5ed8-9b34-48b5-b243-391e729c8b5d.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\56dbbcab-a8de-4e69-abfc-2bf4b74354f1.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\56dbbcab-a8de-4e69-abfc-2bf4b74354f1.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\620978d3-b807-45fe-a3e3-04c00193bfc4.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\620978d3-b807-45fe-a3e3-04c00193bfc4.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\6568ee57-2f9e-45cc-8e94-cd389f9f22a8.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\6568ee57-2f9e-45cc-8e94-cd389f9f22a8.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\6cbf5609-7713-4512-90a0-39844948201f.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\6cbf5609-7713-4512-90a0-39844948201f.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\6e101cf9-834e-4729-81c8-f7e77ca2f9ce.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\6e101cf9-834e-4729-81c8-f7e77ca2f9ce.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\7ba553f3-0ed0-4e19-b0ed-89e1250583a1.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\7ba553f3-0ed0-4e19-b0ed-89e1250583a1.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\9ba661eb-1fc3-4a9c-8196-4ba9160c4569.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\9ba661eb-1fc3-4a9c-8196-4ba9160c4569.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\a9892dab-6e8b-4002-a2f0-da553620b9b4.png",
+      "PackagePath": "staticwebassets\\img\\Voitures\\a9892dab-6e8b-4002-a2f0-da553620b9b4.png"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\c591e388-d920-403c-a037-ebd3b3e6ee4a.jpg",
+      "PackagePath": "staticwebassets\\img\\Voitures\\c591e388-d920-403c-a037-ebd3b3e6ee4a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\Voitures\\ceb1eca3-d416-48fc-8cd6-38a74287ea43.jpg",
+      "PackagePath": "staticwebassets\\img\\Voitures\\ceb1eca3-d416-48fc-8cd6-38a74287ea43.jpg"
     },
     {
       "Id": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\wwwroot\\img\\banner-voiture.jpg",

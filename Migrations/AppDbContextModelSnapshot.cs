@@ -36,7 +36,7 @@ namespace GestionVoituresExpress.Migrations
 
                     b.Property<string>("CodeVIN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
@@ -48,12 +48,6 @@ namespace GestionVoituresExpress.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(10,2)");
-
-                    b.Property<DateTime>("ToSellDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Trim")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -62,6 +56,9 @@ namespace GestionVoituresExpress.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CarID");
+
+                    b.HasIndex("CodeVIN")
+                        .IsUnique();
 
                     b.ToTable("Cars");
                 });
@@ -130,21 +127,27 @@ namespace GestionVoituresExpress.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionID"));
 
-                    b.Property<double>("BuyingPrice")
-                        .HasColumnType("float");
+                    b.Property<DateTime>("BuyingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("BuyingPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("CarID")
                         .HasColumnType("int");
 
-                    b.Property<double>("SellingPrice")
-                        .HasColumnType("float");
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("SellingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("SellingPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserID")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("date")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("TransactionID");
 
@@ -402,7 +405,7 @@ namespace GestionVoituresExpress.Migrations
             modelBuilder.Entity("GestionVoituresExpress.Models.Transaction", b =>
                 {
                     b.HasOne("GestionVoituresExpress.Models.Car", "Car")
-                        .WithMany("Transactions")
+                        .WithMany()
                         .HasForeignKey("CarID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -472,8 +475,6 @@ namespace GestionVoituresExpress.Migrations
             modelBuilder.Entity("GestionVoituresExpress.Models.Car", b =>
                 {
                     b.Navigation("Repairing");
-
-                    b.Navigation("Transactions");
                 });
 
             modelBuilder.Entity("GestionVoituresExpress.Models.Repairing", b =>

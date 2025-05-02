@@ -27,12 +27,7 @@ namespace GestionVoituresExpress.Models
             base.OnModelCreating(modelBuilder);
 
 
-           // Relation Transaction  Car
-            modelBuilder.Entity<Transaction>()
-            .HasOne(t => t.Car)
-            .WithMany(c => c.Transactions)
-            .HasForeignKey(t => t.CarID)
-            .OnDelete(DeleteBehavior.Cascade);
+      
 
             //Relation Car Reparation
             modelBuilder.Entity<Repairing>()

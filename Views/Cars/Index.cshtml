@@ -1,0 +1,54 @@
+﻿@model IEnumerable<GestionVoituresExpress.Models.Car>
+
+@{
+    ViewData["Title"] = "Liste des voitures";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">Liste des voitures disponibles</h2>
+
+<form method="get" asp-controller="Cars" asp-action="Filtrer" class="mb-4">
+
+    <div class="form-row" style="display:flex">
+        <div class="form-group col-md-3">
+            <label>Marque</label>
+            <input type="text" name="marque" class="form-control" placeholder="Ex : Peugeot" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Modèle</label>
+            <input type="text" name="model" class="form-control" placeholder="Ex : 208" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Année</label>
+            <input type="number" name="annee" min="1990" max="@DateTime.Now.Year" class="form-control" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Prix maximum</label>
+            <input type="number" name="prix" class="form-control" placeholder="€" />
+        </div>
+    </div>
+    <a style="    color: #000;" class="btn btn-success" asp-controller="Cars" asp-action="Filtrer" type="submit">Filtrer</a>
+</form>
+
+<div class="row">
+    @foreach (var voiture in Model)
+    {
+        <div class="col-md-6 mb-4">
+            <div class="card flex-row shadow-sm">
+                <img src="@voiture.ImageURL" alt="Photo de @voiture.Brand @voiture.Model" class="img-fluid" style="max-width: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@voiture.Brand @voiture.Model (@voiture.Year)</h5>
+                    <p class="card-text">
+                        <strong>Finition :</strong> @voiture.Trim <br />
+                      
+                        <strong>Kilométrage :</strong> @voiture.Km km <br />
+                        <strong>Code VIN :</strong> @voiture.CodeVIN
+                    </p>
+                    <a asp-action="Details" style="color:#000" asp-controller="Cars" asp-route-id="@voiture.CarID" class="btn btn-info mr-2">Détails</a>
+
+                   @*  <a asp-action="Acheter" asp-controller="Car" asp-action="BuyACar" asp-route-id="@voiture.CarID" class="btn btn-success">Acheter</a> *@
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<GestionVoituresExpress.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Liste des voitures";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fdfaf5;
+    }
+
+    h1 {
+        color: #2c1b12;
+        margin-bottom: 30px;
+    }
+
+    .btn-gold {
+        background-color: #d7a75c;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-gold:hover {
+            background-color: #bb8f4a;
+        }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+        .table thead {
+            background-color: #2c1b12;
+            color: white;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+    .action-links a {
+        margin-right: 8px;
+        color: #2c1b12;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+        .action-links a:hover {
+            text-decoration: underline;
+        }
+
+</style>
+
+<h1>Liste des voitures</h1>
+
+<p>
+    <a asp-action="Create" class="btn-gold">Créer une voiture</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code VIN</th>
+            <th>Date d'achat</th>
+            <th>Prix d'achat (€)</th>
+            <th>Réparations effectuées</th>
+            <th>Date de vente</th>
+            <th>Prix de vente (€)</th>
+            <th>Année</th>
+            <th>Marque</th>
+            <th>Modèle</th>
+            <th>Finition</th>
+            <th>Kilométrage</th>
+            <th>Image</th>
+            <th>Disponibilité</th>
+           
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Car.CodeVIN</td>
+                <td>@item.BuyingDate.ToShortDateString()</td>
+                <td>@item.BuyingPrice</td>
+                <td>@item.Car.Repairing</td>
+                <td>@item.SellingDate?.ToShortDateString()</td>
+                <td>@item.SellingPrice</td>
+                <td>@item.Car.Year</td>
+                <td>@item.Car.Brand</td>
+                <td>@item.Car.Model</td>
+                <td>@item.Car.Trim</td>
+                <td>@item.Car.Km</td>
+                <td>
+                    <img src="@item.Car.ImageURL" alt="Photo" style="height: 50px; object-fit: cover;" />
+                </td>
+                <td>
+                    @(item.IsAvailable ? "Disponible" : "Pas disponible")
+                </td>
+                <td class="action-links">
+                    <a asp-action="Edit" asp-controller="Admin" asp-route-id="@item.CarID">Modifier</a>
+                    <a asp-action="Details" asp-controller="Admin" asp-route-id="@item.CarID">Détails</a>
+                    <a asp-action="Delete" asp-controller="Admin" asp-route-id="@item.CarID">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

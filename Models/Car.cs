@@ -2,41 +2,45 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using Newtonsoft.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 
 namespace GestionVoituresExpress.Models
 {
+    [Index(nameof(CodeVIN), IsUnique = true)]
     public class Car
     {
         [Key]
         public int CarID { get; set; }
 
-        [Required]
+        //[Required(ErrorMessage = "Le Code VIN est obligatoire.")]
+        //[StringLength(17, MinimumLength = 17, ErrorMessage = "Le code VIN doit contenir exactement 17 caractères.")]
+        //[RegularExpression(@"^[A-HJ-NPR-Z0-9]{17}$", ErrorMessage = "Le code VIN n'est pas valide.")]
         public string CodeVIN { get; set; }
 
         [Range(1990, 2025, ErrorMessage = "L'année doit être comprise entre 1990 et 2025.")]
         public int Year { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "La champ de la marque de la voiture est obligatoire.")]
         public string Brand { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Le champ du modèle de la voiture est obligatoire.")]
         public string Model { get; set; }
+
         [Display(Name = "Finition")]
         public string Trim { get; set; } // Finition
 
-        [Column(TypeName = "decimal(10,2)")]
-        public double Price { get; set; }
+       
 
+        [Range(0, int.MaxValue, ErrorMessage = "Le kilométrage doit être un nombre positif.")]
         public int? Km { get; set; }
 
-        [Display(Name = "Date de mise en vente")]
-        [DataType(DataType.Date)]
-        public DateTime ToSellDate { get; set; }
+
 
         public string? ImageURL { get; set; }
 
-        public ICollection<Repairing> Repairing { get; set; }
-        public ICollection<Transaction> Transactions { get; set; }
+        public ICollection<Repairing>? Repairing { get; set; }
+    
     }
 }
 

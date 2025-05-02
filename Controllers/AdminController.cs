@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GestionVoituresExpress.Models;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace GestionCarsExpress.Controllers
 {
@@ -16,7 +17,12 @@ namespace GestionCarsExpress.Controllers
             _context = context;
         }
 
-        //  Liste des Voitures
+        //Récupère l'id de l'admin
+        private string GetAdminUserId()
+        {
+            var admin = _context.Users.FirstOrDefault(u => u.IsAdmin == true);
+            return admin != null ? admin.Id : throw new Exception("Aucun admin trouvé.");
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -28,24 +34,71 @@ namespace GestionCarsExpress.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var transaction = new Transaction();
+            return View(transaction);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Car car)
-        {   //Generer via GUID pour le code VIN 
+     
+        public async Task<IActionResult> Create(Transaction transaction, IFormFile ImageUpload)
+        {
 
+            transaction.User = _context.Users.FirstOrDefault(u => u.IsAdmin == true);
+            transaction.UserID = transaction.User.Id;
+            
+            //Generer via GUID pour le id Car
+            if (ImageUpload != null && ImageUpload.Length > 0)
+            {
+                // Génèration d'un nom de fichier unique
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageUpload.FileName);
+                var filePath = Path.Combine("wwwroot/img/Voitures", fileName);
+      
+             
+                // Sauvegarde physique du fichier
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ImageUpload.CopyToAsync(stream);
+                }
+
+               
+                transaction.Car.ImageURL = $"img/Voitures/{fileName}";
+            }
             if (ModelState.IsValid)
             {
-                _context.Cars.Add(car);
+                if (transaction.SellingPrice == null) 
+                {
+                    transaction.SellingPrice = transaction.BuyingPrice + 500;//prix initial avant coût réparations
+                }
+                _context.Cars.Add(transaction.Car);
+                _context.Transactions.Add(transaction);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("List","Admin");
             }
-            return View(car);
+            else
+                { 
+                //TODO/FichierLOg
+                foreach (var modelState in ModelState)
+                {
+                    foreach (var error in modelState.Value.Errors)
+                    {
+                        Console.WriteLine($"Champ : {modelState.Key} — Erreur : {error.ErrorMessage}");
+                    }
+                }
+            }
+            return View(transaction);
         }
 
-    
+
+  
+
+        public async Task<IActionResult> List()
+        {
+           var transactions = await _context.Transactions
+            .Include(t => t.Car)
+            .ToListAsync();
+             return View(transactions);
+        }
+
         public async Task<IActionResult> Edit(int id)
         {
             var Car = await _context.Cars.FindAsync(id);
@@ -55,22 +108,35 @@ namespace GestionCarsExpress.Controllers
             }
             return View(Car);
         }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Car car)
-        {
+        public async Task<IActionResult> Edit(int id, Car car,IFormFile ImageUpload)
+        {  
+
             if (id != car.CarID)
             {
                 return BadRequest();
             }
+            if (ImageUpload != null && ImageUpload.Length > 0)
+            {
+                // Génèration d'un nom de fichier unique
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageUpload.FileName);
+                var filePath = Path.Combine("wwwroot/img/Voitures", fileName);
 
+                // Sauvegarde physique du fichier
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ImageUpload.CopyToAsync(stream);
+                }
+
+
+                car.ImageURL = $"img/Voitures/{fileName}";
+            }
             if (ModelState.IsValid)
             {
-                _context.Update(car.CarID);
+                _context.Update(car);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("List");
             }
             return View(car);
         }

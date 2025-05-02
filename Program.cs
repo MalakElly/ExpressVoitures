@@ -37,7 +37,7 @@ using (var scope = app.Services.CreateScope())
     }
 
 
-    var adminEmail = "test@gmail.com";
+    var adminEmail = "test123@gmail.com";
     var user = await userManager.FindByEmailAsync(adminEmail);
     if (user == null)
     {
@@ -70,6 +70,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}");
-
-
 app.Run();
+
