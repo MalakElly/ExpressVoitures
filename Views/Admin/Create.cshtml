@@ -1,4 +1,4 @@
-﻿@model GestionVoituresExpress.Models.Transaction
+﻿@model GestionVoituresExpress.ViewModels.CarViewModel
 
 @{
     ViewData["Title"] = "Ajouter une voiture";
@@ -79,27 +79,27 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="BuyingDate">Date d'achat</label>
-                <input asp-for="BuyingDate" class="form-control" type="date" min="2000-01-01" />
-                <span asp-validation-for="BuyingDate" class="text-danger"></span>
+                <label asp-for="Transaction.BuyingDate">Date d'achat</label>
+                <input asp-for="Transaction.BuyingDate" class="form-control" type="date" min="2000-01-01" />
+                <span asp-validation-for="Transaction.BuyingDate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="BuyingPrice">Prix d'achat</label>
-                <input asp-for="BuyingPrice" class="form-control" />
-                <span asp-validation-for="BuyingPrice" class="text-danger"></span>
+                <label asp-for="Transaction.BuyingPrice">Prix d'achat</label>
+                <input asp-for="Transaction.BuyingPrice" class="form-control" />
+                <span asp-validation-for="Transaction.BuyingPrice" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="SellingDate">Date de vente</label>
-                <input asp-for="SellingDate" class="form-control" type="date" min="2000-01-01" />
-                <span asp-validation-for="SellingDate" class="text-danger"></span>
+                <label asp-for="Transaction.SellingDate">Date de vente</label>
+                <input asp-for="Transaction.SellingDate" class="form-control" type="date" min="2000-01-01" />
+                <span asp-validation-for="Transaction.SellingDate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="SellingPrice">Prix de vente</label>
-                <input asp-for="SellingPrice" class="form-control" />
-                <span asp-validation-for="SellingPrice" class="text-danger"></span>
+                <label asp-for="Transaction.SellingPrice">Prix de vente</label>
+                <input asp-for="Transaction.SellingPrice" class="form-control" />
+                <span asp-validation-for="Transaction.SellingPrice" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -126,11 +126,26 @@
                 <span asp-validation-for="Car.Trim" class="text-danger"></span>
             </div>
 
+          
+
             <div class="form-group">
                 <label asp-for="Car.Km">Kilométrage</label>
                 <input asp-for="Car.Km" class="form-control" />
                 <span asp-validation-for="Car.Km" class="text-danger"></span>
             </div>
+
+            <h4>Réparations effectuées</h4>
+
+            <div id="reparations-container" >
+       
+           </div>
+ 
+            
+         
+            <button type="button" class="btn btn-secondary mt-2" onclick="ajouterReparation()">+ Ajouter une réparation</button> 
+
+
+           
 
             <div class="form-group">
                 <label for="ImageUpload">Importer une image</label>
@@ -139,11 +154,11 @@
             </div>
 
             <div class="form-group form-check mt-3">
-                <input asp-for="IsAvailable" class="form-check-input" type="checkbox" />
-                <label asp-for="IsAvailable" class="form-check-label">La voiture est disponible à la vente</label>
-                <span asp-validation-for="IsAvailable" class="text-danger"></span>
+                <input asp-for="Transaction.IsAvailable" class="form-check-input" type="checkbox" />
+                <label asp-for="Transaction.IsAvailable" class="form-check-label">La voiture est disponible à la vente</label>
+                <span asp-validation-for="Transaction.IsAvailable" class="text-danger"></span>
             </div>
-
+        
             <br />
             <button type="submit" class="btn-gold">Ajouter la voiture</button>
         </form>
@@ -153,9 +168,44 @@
 </div>
 
 
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        let reparationIndex = 0;
+        const availableTypes = @Html.Raw(Json.Serialize(Model.Repairings.First().AvailableTypes));
+
+        function ajouterReparation() {
+            const container = document.getElementById("reparations-container");
+
+            let typeOptions = '';
+            availableTypes.forEach(type => {
+                typeOptions += `<option value="${type.value}">${type.text}</option>`;
+            });
+
+            const html = `
+                <div class="border p-3 mb-3">
+                    <div class="form-group">
+                        <label for="Repairings_${reparationIndex}__Type">Type de réparation</label>
+                        <select name="Repairings[${reparationIndex}].Type" class="form-control">
+                            ${typeOptions}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Repairings_${reparationIndex}__Price">Prix</label>
+                        <input name="Repairings[${reparationIndex}].Price" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Repairings_${reparationIndex}__RepairingDate">Date</label>
+                        <input type="date" name="Repairings[${reparationIndex}].RepairingDate" class="form-control" />
+                    </div>
+                </div>
+            `;
+
+            container.insertAdjacentHTML("beforeend", html);
+            reparationIndex++;
+        }
+    </script>
 }
+

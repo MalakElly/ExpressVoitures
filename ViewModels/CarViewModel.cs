@@ -6,5 +6,8 @@ namespace GestionVoituresExpress.ViewModels
     {
         public Car Car { get; set; }
         public Transaction Transaction { get; set; }
+
+        public List<RepairingViewModel> Repairings { get; set; }
+
     }
 }

@@ -1,35 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\GestionVoituresExpress.csproj": {}
+    "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\GestionVoituresExpress.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\GestionVoituresExpress.csproj": {
+    "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\GestionVoituresExpress.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\GestionVoituresExpress.csproj",
+        "projectUniqueName": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\GestionVoituresExpress.csproj",
         "projectName": "GestionVoituresExpress",
-        "projectPath": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\GestionVoituresExpress.csproj",
-        "packagesPath": "C:\\Users\\malak.el-oualy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malak.el-oualy\\Documents\\GestionVoituresExpress\\obj\\",
+        "projectPath": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\GestionVoituresExpress.csproj",
+        "packagesPath": "C:\\Users\\Malak.El-Oualy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\malak.el-oualy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Malak.El-Oualy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -37,11 +38,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -103,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

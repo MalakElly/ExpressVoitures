@@ -37,7 +37,7 @@ using (var scope = app.Services.CreateScope())
     }
 
 
-    var adminEmail = "test123@gmail.com";
+    var adminEmail = "admin@gmail.com";
     var user = await userManager.FindByEmailAsync(adminEmail);
     if (user == null)
     {

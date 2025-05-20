@@ -56,7 +56,7 @@ namespace GestionVoituresExpress.Models
                 .HasOne(t => t.User)
                 .WithMany(u => u.Transactions)
                 .HasForeignKey(t => t.UserID)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
      

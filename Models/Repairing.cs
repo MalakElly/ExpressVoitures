@@ -13,7 +13,7 @@ namespace GestionVoituresExpress.Models
        
         public DateTime RepairingDate { get; set; }
        
-        public double RepairingPrice { get; set; } //Prix de la reparation
+        public decimal RepairingPrice { get; set; } //Prix de la reparation
         
        public int CarID { get; set; }
 

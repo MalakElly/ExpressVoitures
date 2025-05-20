@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using GestionVoituresExpress.Models;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using GestionVoituresExpress.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GestionCarsExpress.Controllers
 {
@@ -34,17 +36,37 @@ namespace GestionCarsExpress.Controllers
 
         public IActionResult Create()
         {
-            var transaction = new Transaction();
-            return View(transaction);
+            var types = _context.RepairingType
+                .Select(rt => new SelectListItem
+                {
+                    Value = rt.RepairingTypeId.ToString(),
+                    Text = rt.RepairingName
+                }).ToList();
+
+            var vm = new CarViewModel
+            {
+                Car = new Car(),
+                Transaction = new Transaction(),
+                Repairings = new List<RepairingViewModel>
+        {
+            new RepairingViewModel
+            {
+                AvailableTypes = types
+            }
+        }
+            };
+
+            return View(vm);
         }
 
         [HttpPost]
      
-        public async Task<IActionResult> Create(Transaction transaction, IFormFile ImageUpload)
+        public async Task<IActionResult> Create(Transaction transaction,Car car,List<Repairing> Repairings, IFormFile ImageUpload)
         {
 
             transaction.User = _context.Users.FirstOrDefault(u => u.IsAdmin == true);
             transaction.UserID = transaction.User.Id;
+            transaction.Car.Repairing = Repairings;
             
             //Generer via GUID pour le id Car
             if (ImageUpload != null && ImageUpload.Length > 0)
@@ -67,9 +89,16 @@ namespace GestionCarsExpress.Controllers
             {
                 if (transaction.SellingPrice == null) 
                 {
-                    transaction.SellingPrice = transaction.BuyingPrice + 500;//prix initial avant coût réparations
+                    foreach (var repairing in Repairings)
+                    {
+                        transaction.SellingPrice += repairing.RepairingPrice;
+                    }
+
+                    transaction.SellingPrice = transaction.BuyingPrice + 500 + transaction.SellingPrice;//prix initial avec coût réparations
                 }
-                _context.Cars.Add(transaction.Car);
+
+                //_context.Repairing.AddRange(transaction.Car.Repairing);
+                //_context.Cars.Add(transaction.Car);
                 _context.Transactions.Add(transaction);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("List","Admin");

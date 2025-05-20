@@ -36,7 +36,8 @@ namespace GestionVoituresExpress.Migrations
 
                     b.Property<string>("CodeVIN")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(17)
+                        .HasColumnType("nvarchar(17)");
 
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
@@ -77,8 +78,8 @@ namespace GestionVoituresExpress.Migrations
                     b.Property<DateTime>("RepairingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("RepairingPrice")
-                        .HasColumnType("float");
+                    b.Property<decimal>("RepairingPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("RepairingId");
 
@@ -413,7 +414,7 @@ namespace GestionVoituresExpress.Migrations
                     b.HasOne("GestionVoituresExpress.Models.User", "User")
                         .WithMany("Transactions")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Car");
