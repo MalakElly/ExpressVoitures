@@ -17,8 +17,8 @@ namespace GestionVoituresExpress.Models
         [StringLength(17, MinimumLength = 17, ErrorMessage = "Le code VIN doit contenir exactement 17 caractères.")]
         [RegularExpression(@"^[A-HJ-NPR-Z0-9]{17}$", ErrorMessage = "Le code VIN n'est pas valide.")]
         public string CodeVIN { get; set; }
-
-        [Range(1990, 2025, ErrorMessage = "L'année doit être comprise entre 1990 et 2025.")]
+        [Required(ErrorMessage = "L'année de production est obligatoire.")]
+        [Range(1990, 2100, ErrorMessage = "L'année doit être comprise entre 1990 et 2100.")]
         public int Year { get; set; }
 
         [Required(ErrorMessage = "La champ de la marque de la voiture est obligatoire.")]

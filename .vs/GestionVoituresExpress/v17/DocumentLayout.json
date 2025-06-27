@@ -1,0 +1,421 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\cars\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\cars\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\viewmodels\\carviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:viewmodels\\carviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\admin\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\viewmodels\\repairingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:viewmodels\\repairingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\models\\repairing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:models\\repairing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\migrations\\20250520122644_ajoutdesreparations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:migrations\\20250520122644_ajoutdesreparations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|c:\\users\\malak.el-oualy\\onedrive - ib cegos\\documents\\projects\\gestionvoituresexpress\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7E954AC-98F4-4744-9FF4-426A84FE2FAD}|GestionVoituresExpress.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Index.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswDAAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T12:38:13.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Details.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T12:38:10.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T12:38:04.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Transaction.cs",
+              "RelativeToolTip": "Models\\Transaction.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T08:43:06.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T08:33:43.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Delete.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAswGkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T08:33:04.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAAwFQBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:01:20.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T13:31:19.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Create.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Create.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T08:49:17.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CarViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\ViewModels\\CarViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CarViewModel.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\ViewModels\\CarViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CarViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:15:31.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "Controllers\\CarsController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAQwJwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T12:40:38.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Contact.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Contact.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Cars\\Contact.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T13:12:14.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Edit.cshtml",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T08:08:17.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\List.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\List.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Admin\\List.cshtml",
+              "RelativeToolTip": "Views\\Admin\\List.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAGIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T08:29:13.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RepairingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\ViewModels\\RepairingViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RepairingViewModel.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\ViewModels\\RepairingViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RepairingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:00:05.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Repairing.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Repairing.cs",
+              "RelativeDocumentMoniker": "Models\\Repairing.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Repairing.cs",
+              "RelativeToolTip": "Models\\Repairing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:44:33.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "Models\\Car.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\Car.cs",
+              "RelativeToolTip": "Models\\Car.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:25:21.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T20:33:46.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Pages\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T20:33:34.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T13:11:19.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "additional-methods.js",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeToolTip": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ViewState": "AgIAAP8CAAAAAAAAAAAqwC8DAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-20T20:22:50.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250520122644_AjoutDesReparations.cs",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Migrations\\20250520122644_AjoutDesReparations.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250520122644_AjoutDesReparations.cs",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Migrations\\20250520122644_AjoutDesReparations.cs",
+              "RelativeToolTip": "Migrations\\20250520122644_AjoutDesReparations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:26:45.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T10:48:13.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Malak.El-Oualy\\OneDrive - ib Cegos\\Documents\\Projects\\GestionVoituresExpress\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T10:43:37.537Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

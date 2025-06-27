@@ -1,7 +1,7 @@
 ﻿@page
 @model LogoutModel
 @{
-    ViewData["Title"] = "Log out";
+    ViewData["Title"] = "Se déconnecter";
 }
 
 <header>
@@ -10,12 +10,13 @@
         if (User.Identity?.IsAuthenticated ?? false)
         {
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark">Click here to Logout</button>
+                 <p>Etes-vous sûr(e) de vouloir vous déconnecter ? </p>
+                <button type="submit" class="nav-link btn btn-link text-dark" style="background-color: #b5b8b5;">Oui</button>
             </form>
         }
         else
         {
-            <p>You have successfully logged out of the application.</p>
+            <p>Vous êtes bien déconnecté de votre application.</p>
         }
     }
 </header>

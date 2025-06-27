@@ -1,73 +1,229 @@
-﻿@model GestionVoituresExpress.Models.Car
+﻿@model GestionVoituresExpress.ViewModels.CarViewModel
+
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Modifier une voiture";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    body {
+        background-color: #fefaf3;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<h1>Edit</h1>
+    h1 {
+        color: #2c1b12;
+        margin-bottom: 30px;
+    }
 
-<h4>Car</h4>
+    .form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #2c1b12;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .form-check-label {
+        color: #2c1b12;
+    }
+
+    .btn-gold {
+        background-color: #d7a75c;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-gold:hover {
+            background-color: #bb8f4a;
+        }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #2c1b12;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+<h1>Modifier une voiture</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <input type="hidden" asp-for="CarID" />
+    <div class="col-md-6 form-container">
         <form method="post" asp-controller="Admin" asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Car.CarID" />
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-         
+
             <div class="form-group">
-                <label asp-for="CodeVIN" class="control-label"></label>
-                <input asp-for="CodeVIN" class="form-control" />
-                <span asp-validation-for="CodeVIN" class="text-danger"></span>
+                <label asp-for="Car.CodeVIN">Code VIN</label>
+                <input asp-for="Car.CodeVIN" class="form-control" />
+                <span asp-validation-for="Car.CodeVIN" class="text-danger"></span>
+            </div>
+
+          
+            <div class="form-group">
+                <label asp-for="Transaction.BuyingDate">Date d'achat</label>
+                <input asp-for="Transaction.BuyingDate" class="form-control" type="date" />
+                <span asp-validation-for="Transaction.BuyingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Year" class="control-label"></label>
-                <input asp-for="Year" class="form-control" />
-                <span asp-validation-for="Year" class="text-danger"></span>
+                <label asp-for="Transaction.BuyingPrice">Prix d'achat</label>
+                <input asp-for="Transaction.BuyingPrice" value="0.00" type="text" class="form-control" placeholder="Ex : 12000" />
+                <span asp-validation-for="Transaction.BuyingPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Brand" class="control-label"></label>
-                <input asp-for="Brand" class="form-control" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
+                <label asp-for="Transaction.SellingDate">Date de vente</label>
+                <input asp-for="Transaction.SellingDate" class="form-control" type="date" />
+                <span asp-validation-for="Transaction.SellingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Model" class="control-label"></label>
-                <input asp-for="Model" class="form-control" />
-                <span asp-validation-for="Model" class="text-danger"></span>
+                <label asp-for="Transaction.SellingPrice">Prix de vente</label>
+                <input asp-for="Transaction.SellingPrice" class="form-control" />
+                <span asp-validation-for="Transaction.SellingPrice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Car.Year">Année</label>
+                <input asp-for="Car.Year" class="form-control" />
+                <span asp-validation-for="Car.Year" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Trim" class="control-label"></label>
-                <input asp-for="Trim" class="form-control" />
-                <span asp-validation-for="Trim" class="text-danger"></span>
-            </div>
-        
-            <div class="form-group">
-                <label asp-for="Km" class="control-label"></label>
-                <input asp-for="Km" class="form-control" />
-                <span asp-validation-for="Km" class="text-danger"></span>
+                <label asp-for="Car.Brand">Marque</label>
+                <input asp-for="Car.Brand" class="form-control" />
+                <span asp-validation-for="Car.Brand" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @if (!string.IsNullOrEmpty(Model.ImageURL))
+                <label asp-for="Car.Model">Modèle</label>
+                <input asp-for="Car.Model" class="form-control" />
+                <span asp-validation-for="Car.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Trim">Finition</label>
+                <input asp-for="Car.Trim" class="form-control" />
+                <span asp-validation-for="Car.Trim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Car.Km">Kilométrage</label>
+                <input asp-for="Car.Km" class="form-control" />
+                <span asp-validation-for="Car.Km" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Image actuelle</label><br />
+                @if (!string.IsNullOrEmpty(Model.Car.ImageURL))
                 {
-                    <img src="~/@Model.ImageURL" alt="Image de la voiture" style="max-height: 150px;" />
+                    <img src="@Model.Car.ImageURL" style="max-height:100px;" />
                 }
-
-                <label for="ImageUpload" class="control-label">Importer une nouvelle image</label>
-                <input type="file" name="ImageUpload" class="form-control" accept="image/png, image/jpeg" />
-
-                <span asp-validation-for="ImageURL" class="text-danger"></span>
+                <input type="file" name="ImageUpload" class="form-control" />
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="Enregistrer les modifications" class="btn btn-primary" />
+            <!-- Reparations -->
+            <h4>Réparations effectuées</h4>
+            <div id="reparations-container">
+                @{
+                    int idx = 0;
+                    if (Model.Repairings != null)
+                    {
+                        foreach (var rep in Model.Repairings)
+                        {
+                            <div class="border p-3 mb-3">
+                                <div class="form-group">
+                                    <label>Type</label>
+                                    <select name="Repairings[@idx].RepairingType" class="form-control">
+                                        @foreach (var t in Model.AvailableTypes)
+                                        {
+                                            <option value="@t.Value" selected="@(t.Value == rep.RepairingTypeId?.ToString())">
+                                                @t.Text
+                                            </option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Prix</label>
+                                    <input name="Repairings[@idx].Price" class="form-control" value="@rep.Price" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input type="date" name="Repairings[@idx].RepairingDate" class="form-control"
+                                           value="@(rep.RepairingDate?.ToString("yyyy-MM-dd"))" />
+                                </div>
+                            </div>
+                            idx++;
+                        }
+                    }
+                }
             </div>
+            <button type="button" class="btn btn-secondary mt-2" onclick="ajouterReparation()">+ Ajouter une réparation</button>
+
+            <div class="form-group form-check mt-3">
+                <input asp-for="Transaction.IsAvailable" class="form-check-input" />
+                <label asp-for="Transaction.IsAvailable" class="form-check-label"></label>
+            </div>
+
+            <button type="submit" class="btn-gold">Enregistrer</button>
+            <a asp-action="List" class="back-link">← Retour à la liste</a>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="List">Retour à la liste</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+                (function ($) {
+          $.validator.methods.number = function(value, element) {
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})*)(?:[\.,]\d+)?$/.test(value);
+          };
+          $.validator.methods.range = function(value, element, param) {
+            var v = value.replace(',', '.');
+            return this.optional(element) || (v >= param[0] && v <= param[1]);
+          };
+        })(jQuery);
+
+        let reparationIndex = @Model.Repairings?.Count() ?? 0;
+        const availableTypes = @Html.Raw(Json.Serialize(Model.AvailableTypes));
+
+        function ajouterReparation() {
+            let options = availableTypes.map(t =>
+                `<option value="${t.value}">${t.text}</option>`
+            ).join("");
+            const html = `
+                <div class="border p-3 mb-3">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select name="Repairings[${reparationIndex}].RepairingTypeId" class="form-control">
+                            ${options}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Prix</label>
+                        <input name="Repairings[${reparationIndex}].Price" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" name="Repairings[${reparationIndex}].RepairingDate" class="form-control" />
+                    </div>
+                </div>`;
+            document.getElementById("reparations-container").insertAdjacentHTML("beforeend", html);
+            reparationIndex++;
+        }
+    </script>
 }

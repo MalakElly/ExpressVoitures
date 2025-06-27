@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionVoituresExpress")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9476877ac1dbfe150a2b2e042bb5f26ca102a4cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33d43442302c3210f1529e79f6f7504a1376e71a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionVoituresExpress")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionVoituresExpress")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

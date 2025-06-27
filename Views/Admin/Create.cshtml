@@ -69,83 +69,78 @@
 <hr />
 <div class="row">
     <div class="col-md-6 form-container">
-        <form method="post" asp-controller="Admin" asp-action="Create" enctype="multipart/form-data">
+        <form method="post" asp-controller="Admin" asp-action="Create" lang="fr" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
                 <label asp-for="Car.CodeVIN">Code VIN</label>
-                <input asp-for="Car.CodeVIN" class="form-control" />
+                <input asp-for="Car.CodeVIN" class="form-control" placeholder="Saisir le code VIN..." />
                 <span asp-validation-for="Car.CodeVIN" class="text-danger"></span>
             </div>
+            @if (ViewData["errorCodeVin"] != null)
+            {
+                <div id="error-alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Erreur :</strong> Ce code Vin existe déjà dans la base de données
+                </div>
+            }
 
             <div class="form-group">
                 <label asp-for="Transaction.BuyingDate">Date d'achat</label>
-                <input asp-for="Transaction.BuyingDate" class="form-control" type="date" min="2000-01-01" />
+                <input asp-for="Transaction.BuyingDate" class="form-control" type="date" lang="fr" min="1990-01-01" />
                 <span asp-validation-for="Transaction.BuyingDate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Transaction.BuyingPrice">Prix d'achat</label>
-                <input asp-for="Transaction.BuyingPrice" class="form-control" />
+                <input asp-for="Transaction.BuyingPrice" value="0.00" type="text" class="form-control" placeholder="Ex : 12000" />
                 <span asp-validation-for="Transaction.BuyingPrice" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Transaction.SellingDate">Date de vente</label>
-                <input asp-for="Transaction.SellingDate" class="form-control" type="date" min="2000-01-01" />
+                <input asp-for="Transaction.SellingDate" class="form-control" type="date" lang="fr" min="1990-01-01" />
                 <span asp-validation-for="Transaction.SellingDate" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Transaction.SellingPrice">Prix de vente</label>
-                <input asp-for="Transaction.SellingPrice" class="form-control" />
+                <input asp-for="Transaction.SellingPrice" class="form-control"  placeholder="Ex : 14500" />
                 <span asp-validation-for="Transaction.SellingPrice" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Car.Year">Année de production</label>
-                <input asp-for="Car.Year" class="form-control" value="1990" />
+                <input asp-for="Car.Year" class="form-control" placeholder="Ex : 2018" />
                 <span asp-validation-for="Car.Year" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Car.Brand">Marque</label>
-                <input asp-for="Car.Brand" class="form-control" />
+                <input asp-for="Car.Brand" class="form-control" placeholder="Ex : Peugeot" />
                 <span asp-validation-for="Car.Brand" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Car.Model">Modèle</label>
-                <input asp-for="Car.Model" class="form-control" />
+                <input asp-for="Car.Model" class="form-control" placeholder="Ex : 208" />
                 <span asp-validation-for="Car.Model" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Car.Trim">Finition</label>
-                <input asp-for="Car.Trim" class="form-control" />
+                <input asp-for="Car.Trim" class="form-control" placeholder="Ex : GT Line" />
                 <span asp-validation-for="Car.Trim" class="text-danger"></span>
             </div>
 
-          
-
             <div class="form-group">
                 <label asp-for="Car.Km">Kilométrage</label>
-                <input asp-for="Car.Km" class="form-control" />
+                <input asp-for="Car.Km" class="form-control" placeholder="Ex : 85000" />
                 <span asp-validation-for="Car.Km" class="text-danger"></span>
             </div>
 
             <h4>Réparations effectuées</h4>
-
-            <div id="reparations-container" >
-       
-           </div>
- 
-            
-         
-            <button type="button" class="btn btn-secondary mt-2" onclick="ajouterReparation()">+ Ajouter une réparation</button> 
-
-
-           
+            <div id="reparations-container"></div>
+            <button type="button" class="btn btn-secondary mt-2" onclick="ajouterReparation()">+ Ajouter une réparation</button>
 
             <div class="form-group">
                 <label for="ImageUpload">Importer une image</label>
@@ -158,10 +153,11 @@
                 <label asp-for="Transaction.IsAvailable" class="form-check-label">La voiture est disponible à la vente</label>
                 <span asp-validation-for="Transaction.IsAvailable" class="text-danger"></span>
             </div>
-        
+
             <br />
             <button type="submit" class="btn-gold">Ajouter la voiture</button>
         </form>
+
 
         <a asp-action="Index" class="back-link">← Retour à la liste</a>
     </div>
@@ -174,7 +170,8 @@
     }
     <script>
         let reparationIndex = 0;
-        const availableTypes = @Html.Raw(Json.Serialize(Model.Repairings.First().AvailableTypes));
+      const availableTypes = @Html.Raw(Json.Serialize(Model.AvailableTypes));
+
 
         function ajouterReparation() {
             const container = document.getElementById("reparations-container");

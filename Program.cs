@@ -1,6 +1,10 @@
 using GestionVoituresExpress.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using System.Globalization;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AppDbContext") ?? throw new InvalidOperationException("Connection string 'AppDbContext' not found.");
@@ -12,9 +16,23 @@ builder.Services.AddScoped<SignInManager<User>>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+    options.SlidingExpiration = false;
+});
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[] { new CultureInfo("fr-FR") };
+    options.DefaultRequestCulture = new RequestCulture("fr-FR");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
 
 var app = builder.Build();
+
+var loc = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
+app.UseRequestLocalization(loc);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,6 +41,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+
 
 using (var scope = app.Services.CreateScope())
 {
@@ -37,7 +58,7 @@ using (var scope = app.Services.CreateScope())
     }
 
 
-    var adminEmail = "admin@gmail.com";
+    var adminEmail = "AdminVE@gmail.com";//@Admin123
     var user = await userManager.FindByEmailAsync(adminEmail);
     if (user == null)
     {
@@ -57,13 +78,17 @@ using (var scope = app.Services.CreateScope())
     }
 
 }
+app.UseRouting();
+
+
+
 
 app.MapRazorPages();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 
-app.UseRouting();
+
 
 app.UseAuthorization();
 

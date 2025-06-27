@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GestionVoituresExpress.Models.Car>
+﻿@model IEnumerable<GestionVoituresExpress.ViewModels.CarViewModel>
 
 @{
     ViewData["Title"] = "Liste des voitures";
@@ -8,47 +8,58 @@
 <h2 class="mb-4">Liste des voitures disponibles</h2>
 
 <form method="get" asp-controller="Cars" asp-action="Filtrer" class="mb-4">
-
-    <div class="form-row" style="display:flex">
+    <div class="form-row d-flex">
         <div class="form-group col-md-3">
             <label>Marque</label>
-            <input type="text" name="marque" class="form-control" placeholder="Ex : Peugeot" />
+            <input type="text" name="marque" value="@Context.Request.Query["marque"]" class="form-control" placeholder="Ex : Peugeot" />
         </div>
         <div class="form-group col-md-3">
             <label>Modèle</label>
-            <input type="text" name="model" class="form-control" placeholder="Ex : 208" />
+            <input type="text" name="model" value="@Context.Request.Query["model"]" class="form-control" placeholder="Ex : 208" />
         </div>
         <div class="form-group col-md-3">
             <label>Année</label>
-            <input type="number" name="annee" min="1990" max="@DateTime.Now.Year" class="form-control" />
+            <input type="number" name="annee" min="1990" max="@DateTime.Now.Year"
+                   value="@Context.Request.Query["annee"]" class="form-control" />
         </div>
         <div class="form-group col-md-3">
             <label>Prix maximum</label>
-            <input type="number" name="prix" class="form-control" placeholder="€" />
+            <input type="number" name="prix" class="form-control" placeholder="€"
+                   value="@Context.Request.Query["prix"]" />
         </div>
     </div>
-    <a style="    color: #000;" class="btn btn-success" asp-controller="Cars" asp-action="Filtrer" type="submit">Filtrer</a>
+    <button type="submit" class="btn btn-success">Filtrer</button>
+    <a asp-action="Index" asp-controller="Cars" class="btn btn-secondary ml-2">Réinitialiser</a>
 </form>
 
 <div class="row">
-    @foreach (var voiture in Model)
+    @if (!Model.Any())
     {
-        <div class="col-md-6 mb-4">
-            <div class="card flex-row shadow-sm">
-                <img src="@voiture.ImageURL" alt="Photo de @voiture.Brand @voiture.Model" class="img-fluid" style="max-width: 200px; object-fit: cover;">
-                <div class="card-body">
-                    <h5 class="card-title">@voiture.Brand @voiture.Model (@voiture.Year)</h5>
-                    <p class="card-text">
-                        <strong>Finition :</strong> @voiture.Trim <br />
-                      
-                        <strong>Kilométrage :</strong> @voiture.Km km <br />
-                        <strong>Code VIN :</strong> @voiture.CodeVIN
-                    </p>
-                    <a asp-action="Details" style="color:#000" asp-controller="Cars" asp-route-id="@voiture.CarID" class="btn btn-info mr-2">Détails</a>
-
-                   @*  <a asp-action="Acheter" asp-controller="Car" asp-action="BuyACar" asp-route-id="@voiture.CarID" class="btn btn-success">Acheter</a> *@
+        <div class="col-12">
+            <div class="alert alert-info">Aucune voiture ne correspond à vos critères.</div>
+        </div>
+    }
+    else
+    {
+        foreach (var voiture in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card flex-row shadow-sm">
+                    <img src="@voiture.Car.ImageURL" alt="Photo de @voiture.Car.Brand @voiture.Car.Model"
+                         class="img-fluid" style="max-width: 200px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@voiture.Car.Brand @voiture.Car.Model (@voiture.Car.Year)</h5>
+                        <p class="card-text">
+                            <strong>Finition :</strong> @voiture.Car.Trim <br />
+                            <strong>Kilométrage :</strong> @voiture.Car.Km km <br />
+                            <strong>Code VIN :</strong> @voiture.Car.CodeVIN <br />
+                            <strong>Prix :</strong> @(voiture.Transaction?.SellingPrice?.ToString("C") ?? "N/A")
+                        </p>
+                        <a asp-action="Details" asp-controller="Cars" asp-route-id="@voiture.Car.CarID"
+                           class="btn btn-info mr-2" style="color:#fff">Détails</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
     }
 </div>
